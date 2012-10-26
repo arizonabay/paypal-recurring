@@ -23,9 +23,7 @@ module PayPal
       }
 
       def self.process(method, response)
-        p "** PROCESS"
         response_class = PayPal::Recurring::Response.const_get(RESPONDERS[method])
-        p "*** response #{response.inspect}"
         response_class.new(response)
       end
     end
