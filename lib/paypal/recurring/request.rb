@@ -9,7 +9,9 @@ module PayPal
         :profile        => "GetRecurringPaymentsProfileDetails",
         :manage_profile => "ManageRecurringPaymentsProfileStatus",
         :update_profile => "UpdateRecurringPaymentsProfile",
-        :refund         => "RefundTransaction"
+        :refund         => "RefundTransaction",
+        :billing_agreement => "SetCustomerBillingAgreement"
+        
       }
 
       INITIAL_AMOUNT_ACTIONS = {

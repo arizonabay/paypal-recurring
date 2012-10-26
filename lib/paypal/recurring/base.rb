@@ -267,6 +267,19 @@ module PayPal
         request.run(:refund, params)
       end
 
+
+      def billing_agreement
+        params = collect(
+          :return_url,
+          :cancel_url                         
+        ).merge(
+         :L_BILLINGTYPE0 => "MerchantInitiatedBilling"
+                )
+        
+        request.run(:billing_agreement, params)        
+      end
+      
+
       private
       # Collect specified attributes and build a hash out of it.
       #
