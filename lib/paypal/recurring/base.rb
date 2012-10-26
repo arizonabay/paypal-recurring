@@ -273,7 +273,7 @@ module PayPal
           :return_url,
           :cancel_url                         
         ).merge(
-         :L_BILLINGTYPE0 => "MerchantInitiatedBilling"
+         :BILLINGTYPE => "MerchantInitiatedBilling"
                 )
         
         request.run(:billing_agreement, params)        
