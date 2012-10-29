@@ -274,14 +274,13 @@ module PayPal
           :cancel_url                         
         ).merge(
          :BILLINGTYPE => "MerchantInitiatedBilling"
-                )
+        )
         
         request.run(:billing_agreement, params)        
       end
 
- 
       def billing_agreement_details
-        params = collect :token
+        params = collect(:token)
         
         request.run(:billing_agreement_details, params)        
       end
