@@ -11,17 +11,17 @@ module PayPal
       autoload :BillingAgreement,  "paypal/recurring/response/billing_agreement"
 
       RESPONDERS = {
-        :checkout                         => "Checkout",
-        :details                          => "Details",
-        :payment                          => "Payment",
-        :profile                          => "Profile",
-        :create_profile                   => "ManageProfile",
-        :manage_profile                   => "ManageProfile",
-        :update_profile                   => "ManageProfile",
-        :refund                           => "Refund",
-        :billing_agreement                => "BillingAgreement",
-        :billing_agreement_details        => "BillingAgreement",
-        :create_billing_agreement_details => "BillingAgreement"
+        :checkout                  => "Checkout",
+        :details                   => "Details",
+        :payment                   => "Payment",
+        :profile                   => "Profile",
+        :create_profile            => "ManageProfile",
+        :manage_profile            => "ManageProfile",
+        :update_profile            => "ManageProfile",
+        :refund                    => "Refund",
+        :billing_agreement         => "BillingAgreement",
+        :billing_agreement_details => "BillingAgreement",
+        :create_billing_agreement  => "BillingAgreement"
       }
 
       def self.process(method, response)
