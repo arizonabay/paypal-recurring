@@ -267,7 +267,7 @@ module PayPal
         request.run(:refund, params)
       end
 
-
+      # "SetCustomerBillingAgreement"
       def billing_agreement
         params = collect(
           :return_url,
@@ -279,12 +279,21 @@ module PayPal
         request.run(:billing_agreement, params)        
       end
 
+      # "GetBillingAgreementCustomerDetails"
       def billing_agreement_details
         params = collect(:token)
         
         request.run(:billing_agreement_details, params)        
       end
+      
 
+      #"CreateBillingAgreement"
+      def create_billing_agreement
+         params = collect(:token)
+        
+        request.run(:create_billing_agreement, params)        
+       end
+      
       private
       # Collect specified attributes and build a hash out of it.
       #

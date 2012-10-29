@@ -11,8 +11,8 @@ module PayPal
         :update_profile            => "UpdateRecurringPaymentsProfile",
         :refund                    => "RefundTransaction",
         :billing_agreement         => "SetCustomerBillingAgreement",
-        :billing_agreement_details => "GetBillingAgreementCustomerDetails"
-        
+        :billing_agreement_details => "GetBillingAgreementCustomerDetails",
+        :create_billing_agreement  => "CreateBillingAgreement"
       }
 
       INITIAL_AMOUNT_ACTIONS = {
