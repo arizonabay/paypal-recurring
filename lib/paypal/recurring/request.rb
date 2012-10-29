@@ -2,15 +2,16 @@ module PayPal
   module Recurring
     class Request
       METHODS = {
-        :checkout       => "SetExpressCheckout",
-        :payment        => "DoExpressCheckoutPayment",
-        :details        => "GetExpressCheckoutDetails",
-        :create_profile => "CreateRecurringPaymentsProfile",
-        :profile        => "GetRecurringPaymentsProfileDetails",
-        :manage_profile => "ManageRecurringPaymentsProfileStatus",
-        :update_profile => "UpdateRecurringPaymentsProfile",
-        :refund         => "RefundTransaction",
-        :billing_agreement => "SetCustomerBillingAgreement"
+        :checkout                  => "SetExpressCheckout",
+        :payment                   => "DoExpressCheckoutPayment",
+        :details                   => "GetExpressCheckoutDetails",
+        :create_profile            => "CreateRecurringPaymentsProfile",
+        :profile                   => "GetRecurringPaymentsProfileDetails",
+        :manage_profile            => "ManageRecurringPaymentsProfileStatus",
+        :update_profile            => "UpdateRecurringPaymentsProfile",
+        :refund                    => "RefundTransaction",
+        :billing_agreement         => "SetCustomerBillingAgreement",
+        :billing_agreement_details => "GetBillingAgreementCustomerDetails"
         
       }
 
