@@ -31,6 +31,7 @@ module PayPal
       attr_accessor :trial_length
       attr_accessor :trial_period
       attr_accessor :trial_amount
+      attr_accessor :billing_agreement_id
 
       def initialize(options = {})
         options.each {|name, value| send("#{name}=", value)}
