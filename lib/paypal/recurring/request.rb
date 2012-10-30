@@ -93,7 +93,8 @@ module PayPal
         :trial_period          => "TRIALBILLINGPERIOD",
         :username              => "USER",
         :version               => "VERSION",
-        :billing_agreement_id  => "BILLINGAGREEMENTID"
+        :billing_agreement_id  => "BILLINGAGREEMENTID",
+        :reference_id          => "REFERENCEID"
       }
 
       CA_FILE = File.dirname(__FILE__) + "/cacert.pem"

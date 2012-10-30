@@ -32,6 +32,7 @@ module PayPal
       attr_accessor :trial_period
       attr_accessor :trial_amount
       attr_accessor :billing_agreement_id
+      attr_accessor :reference_id
 
       def initialize(options = {})
         options.each {|name, value| send("#{name}=", value)}
@@ -297,7 +298,7 @@ module PayPal
 
       "BillAgreementUpdate"
       def cancel_billing_agreement
-        params = collect(:billing_agreement_id).merge(:BillingAgreementStatus => "Canceled")
+        params = collect(:reference_id).merge(:BillingAgreementStatus => "Canceled")
 
         request.run(:cancel_billing_agreement, params)        
       end
