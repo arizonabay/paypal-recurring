@@ -31,7 +31,6 @@ module PayPal
       attr_accessor :trial_length
       attr_accessor :trial_period
       attr_accessor :trial_amount
-      attr_accessor :billing_agreement_id
       attr_accessor :reference_id
 
       def initialize(options = {})
@@ -301,6 +300,13 @@ module PayPal
         params = collect(:reference_id).merge(:BillingAgreementStatus => "Canceled")
 
         request.run(:cancel_billing_agreement, params)        
+      end
+
+      "DoReferemceTransactionRequest"
+      def request_reference_transaction
+        params = collect(:reference_id, :amount, :currency).merge(:payment_action => "Sale", :description => "reference transaction")
+
+        request.run(:request_reference_transaction, params)
       end
       
       private

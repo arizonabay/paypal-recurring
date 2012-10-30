@@ -2,18 +2,19 @@ module PayPal
   module Recurring
     class Request
       METHODS = {
-        :checkout                  => "SetExpressCheckout",
-        :payment                   => "DoExpressCheckoutPayment",
-        :details                   => "GetExpressCheckoutDetails",
-        :create_profile            => "CreateRecurringPaymentsProfile",
-        :profile                   => "GetRecurringPaymentsProfileDetails",
-        :manage_profile            => "ManageRecurringPaymentsProfileStatus",
-        :update_profile            => "UpdateRecurringPaymentsProfile",
-        :refund                    => "RefundTransaction",
-        :billing_agreement         => "SetCustomerBillingAgreement",
-        :billing_agreement_details => "GetBillingAgreementCustomerDetails",
-        :create_billing_agreement  => "CreateBillingAgreement",
-        :cancel_billing_agreement  => "BillAgreementUpdate"
+        :checkout                      => "SetExpressCheckout",
+        :payment                       => "DoExpressCheckoutPayment",
+        :details                       => "GetExpressCheckoutDetails",
+        :create_profile                => "CreateRecurringPaymentsProfile",
+        :profile                       => "GetRecurringPaymentsProfileDetails",
+        :manage_profile                => "ManageRecurringPaymentsProfileStatus",
+        :update_profile                => "UpdateRecurringPaymentsProfile",
+        :refund                        => "RefundTransaction",
+        :billing_agreement             => "SetCustomerBillingAgreement",
+        :billing_agreement_details     => "GetBillingAgreementCustomerDetails",
+        :create_billing_agreement      => "CreateBillingAgreement",
+        :cancel_billing_agreement      => "BillAgreementUpdate",
+        :request_reference_transaction => "DoReferenceTransactionRequest"
       }
 
       INITIAL_AMOUNT_ACTIONS = {
@@ -93,7 +94,6 @@ module PayPal
         :trial_period          => "TRIALBILLINGPERIOD",
         :username              => "USER",
         :version               => "VERSION",
-        :billing_agreement_id  => "BILLINGAGREEMENTID",
         :reference_id          => "REFERENCEID"
       }
 
