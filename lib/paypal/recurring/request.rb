@@ -14,7 +14,7 @@ module PayPal
         :billing_agreement_details     => "GetBillingAgreementCustomerDetails",
         :create_billing_agreement      => "CreateBillingAgreement",
         :cancel_billing_agreement      => "BillAgreementUpdate",
-        :request_reference_transaction => "DoReferenceTransactionRequest"
+        :request_reference_transaction => "DoReferenceTransaction"
       }
 
       INITIAL_AMOUNT_ACTIONS = {
@@ -116,7 +116,7 @@ module PayPal
       #
       def run(method, params = {})
         params = prepare_params(params.merge(:method => METHODS.fetch(method, method.to_s)))
-        p "params: #{params}"
+        p "params: #{params.inspect}"
         response = post(params)
         Response.process(method, response)
       end
