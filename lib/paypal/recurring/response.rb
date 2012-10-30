@@ -21,7 +21,8 @@ module PayPal
         :refund                    => "Refund",
         :billing_agreement         => "BillingAgreement",
         :billing_agreement_details => "BillingAgreement",
-        :create_billing_agreement  => "BillingAgreement"
+        :create_billing_agreement  => "BillingAgreement",
+        :cancel_billing_agreement  => "BillAgreementUpdate"
       }
 
       def self.process(method, response)

@@ -12,7 +12,8 @@ module PayPal
         :refund                    => "RefundTransaction",
         :billing_agreement         => "SetCustomerBillingAgreement",
         :billing_agreement_details => "GetBillingAgreementCustomerDetails",
-        :create_billing_agreement  => "CreateBillingAgreement"
+        :create_billing_agreement  => "CreateBillingAgreement",
+        :cancel_billing_agreement  => "BillAgreementUpdate"
       }
 
       INITIAL_AMOUNT_ACTIONS = {
@@ -91,7 +92,8 @@ module PayPal
         :trial_length          => "TRIALTOTALBILLINGCYCLES",
         :trial_period          => "TRIALBILLINGPERIOD",
         :username              => "USER",
-        :version               => "VERSION"
+        :version               => "VERSION",
+        :billing_agreement_id  => "BILLINGAGREEMENTID"
       }
 
       CA_FILE = File.dirname(__FILE__) + "/cacert.pem"

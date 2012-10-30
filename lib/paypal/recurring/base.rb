@@ -279,7 +279,7 @@ module PayPal
         request.run(:billing_agreement, params)        
       end
 
-      # "GetBillingAgreementCustomerDetails"
+      #"GetBillingAgreementCustomerDetails"
       def billing_agreement_details
         params = collect(:token)
         
@@ -292,7 +292,14 @@ module PayPal
          params = collect(:token)
         
         request.run(:create_billing_agreement, params)        
-       end
+      end
+
+      "BillAgreementUpdate"
+      def cancel_billing_agreement
+        params = collect(:billing_agreement_id).merge(:BillingAgreementStatus => "Canceled")
+
+        request.run(:cancel_billing_agreement, params)        
+      end
       
       private
       # Collect specified attributes and build a hash out of it.
