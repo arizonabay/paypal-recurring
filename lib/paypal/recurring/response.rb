@@ -22,7 +22,7 @@ module PayPal
         :billing_agreement         => "BillingAgreement",
         :billing_agreement_details => "BillingAgreement",
         :create_billing_agreement  => "BillingAgreement",
-        :cancel_billing_agreement  => "BillAgreementUpdate"
+        :cancel_billing_agreement  => "BillingAgreement"
       }
 
       def self.process(method, response)
