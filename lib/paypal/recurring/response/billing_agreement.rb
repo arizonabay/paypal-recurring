@@ -6,7 +6,6 @@ module PayPal
         mapping(
           :status       => :CHECKOUTSTATUS,
           :email        => :EMAIL,
-          :email        => :EMAIL,
           :payer_id     => :PAYERID,
           :payer_status => :PAYERSTATUS,
           :first_name   => :FIRSTNAME,
@@ -15,7 +14,8 @@ module PayPal
           :currency     => :CURRENCYCODE,
           :amount       => :AMT,
           :description  => :DESC,
-          :ipn_url      => :NOTIFYURL
+          :ipn_url      => :NOTIFYURL,
+          :reference_id => :BILLINGAGREEMENTID
         )
         
         def confirmation_url
