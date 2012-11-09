@@ -272,7 +272,8 @@ module PayPal
       def billing_agreement
         params = collect(
           :return_url,
-          :cancel_url                         
+          :cancel_url,
+          :description                         
         ).merge(
          :BILLINGTYPE => "MerchantInitiatedBilling"
         )

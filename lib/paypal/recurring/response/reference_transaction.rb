@@ -8,9 +8,10 @@ module PayPal
                 :currency         => :CURRENCYCODE,
                 :transaction_id   => :TRANSACTIONID,
                 :fee_amt          => :FEEAMT,
-                :payment_status   => :PAYMENTSTATUS,
+                :status           => :PAYMENTSTATUS,
                 :payment_type     => :PAYMENTTYPE,
-                :transaction_type => :TRANSACTIONTYPE)
+                :transaction_type => :TRANSACTIONTYPE,
+                :tax_amt          => :TAXAMT)
       end
     end
   end
