@@ -283,7 +283,7 @@ module PayPal
 
       #"GetBillingAgreementCustomerDetails"
       def billing_agreement_details
-        params = collect(:token)
+        params = collect(:token, :description)
         
         request.run(:billing_agreement_details, params)        
       end
@@ -291,19 +291,19 @@ module PayPal
 
       #"CreateBillingAgreement"
       def create_billing_agreement
-         params = collect(:token)
+         params = collect(:token, :description)
         
         request.run(:create_billing_agreement, params)        
       end
 
-      "BillAgreementUpdate"
+      # "BillAgreementUpdate"
       def cancel_billing_agreement
-        params = collect(:reference_id).merge(:BillingAgreementStatus => "Canceled")
+        params = collect(:reference_id, :description).merge(:BillingAgreementStatus => "Canceled")
 
         request.run(:cancel_billing_agreement, params)        
       end
 
-      "DoReferemceTransactionRequest"
+      # "DoReferemceTransactionRequest"
       def request_reference_transaction
         params = collect(:reference_id, :amount, :currency).merge(:payment_action => "Sale", :description => "reference transaction")
 
