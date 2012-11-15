@@ -60,7 +60,7 @@ module PayPal
         :billing_type          => "L_BILLINGTYPE0",
         :cancel_url            => "CANCELURL",
         :currency              => ["PAYMENTREQUEST_0_CURRENCYCODE", "CURRENCYCODE"],
-        :description           => ["DESC", "PAYMENTREQUEST_0_DESC", "L_BILLINGAGREEMENTDESCRIPTION0"],
+        :description           => ["DESC", "PAYMENTREQUEST_0_DESC", "BILLINGAGREEMENTDESCRIPTION", "L_BILLINGAGREEMENTDESCRIPTION0"],
         :note                  => "NOTE",
         :item_category         => "L_PAYMENTREQUEST_0_ITEMCATEGORY0",
         :item_name             => "L_PAYMENTREQUEST_0_NAME0",
