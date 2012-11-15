@@ -303,9 +303,9 @@ module PayPal
         request.run(:cancel_billing_agreement, params)        
       end
 
-      # "DoReferemceTransactionRequest"
+      # "DoReferenceTransactionRequest"
       def request_reference_transaction
-        params = collect(:reference_id, :amount, :currency).merge(:payment_action => "Sale", :description => "reference transaction")
+        params = collect(:reference_id, :amount, :currency, :description).merge(:payment_action => "Sale")
 
         request.run(:request_reference_transaction, params)
       end
