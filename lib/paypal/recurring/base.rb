@@ -283,7 +283,7 @@ module PayPal
 
       #"GetBillingAgreementCustomerDetails"
       def billing_agreement_details
-        params = collect(:token, :description)
+        params = collect(:token)
         
         request.run(:billing_agreement_details, params)        
       end
@@ -291,7 +291,7 @@ module PayPal
 
       #"CreateBillingAgreement"
       def create_billing_agreement
-         params = collect(:token, :description)
+        params = collect(:token)
         
         request.run(:create_billing_agreement, params)        
       end
